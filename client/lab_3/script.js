@@ -20,8 +20,8 @@ const totalSlides = slidesArray.length;
 
 function updateSlidePosition() {
   slidesArray.forEach(slide => {
-    slide.classList.remove('visible')
-    slide.classList.add('hidden')
+    slide.classList.remove('visible');
+    slide.classList.add('hidden');
   });
   slides[slidePosition].classList.add('visible');
 }
@@ -33,6 +33,11 @@ function moveToNextSlide() {
     and if so, sets your slidePosition to the first index of an array
     if not, set the slidePosition to the current position plus one
   */
+ if(slidePosition === totalSlides){
+   slidePosition = 0;
+ }else{
+   slidePosition += 1;
+ }
   updateSlidePosition(); // this is how you call a function within a function
 }
 function moveToPrevSlide() {
