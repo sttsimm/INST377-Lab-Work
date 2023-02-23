@@ -75,5 +75,5 @@ document.querySelector('.next') // Get the appropriate element (<button class="n
 document.querySelector('.prev') // Get the appropriate element (<button class="next">)
   .addEventListener('click', () => { // set an event listener on it - when it's clicked, do this callback function
     console.log('clicked prev'); // let's tell the client console we made it to this point in the script
-    moveToNextSlide(); // call the function above to handle this
+    moveToPrevSlide(); // call the function above to handle this
   });
