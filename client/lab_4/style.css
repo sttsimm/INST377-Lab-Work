@@ -30,7 +30,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(195 116 116 / 43%);
 }
 
 
@@ -107,7 +107,7 @@ div {
 
 
   /* box-shadows are fancy */
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  box-shadow: 0 0.5em 1em -0.125em rgb(176 68 68), 0 0 0 1px rgb(10 10 10 / 2%);
 }
 
 
@@ -139,7 +139,7 @@ div {
 }
 
 .right_section {
-  background-color: rgba(255, 224, 138, 0.7);
+  background-color: rgb(176 68 68);
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
