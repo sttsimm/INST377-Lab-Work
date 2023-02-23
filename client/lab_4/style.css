@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h2, h3 {
   margin:0;
   padding:0;
   padding-bottom:1.5rem;
@@ -49,6 +49,10 @@ form {
   accent-color: hsla(120, 100%, 50%, 0.482);
 }
 
+
+div {
+  border:2px dashed rgba(0, 0, 0, 0.8);
+}
 /*
   - These styles use 'class names'
   - You can apply them by using the 'class' attribute on your HTML
