@@ -1,33 +1,40 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sarah T's Labs for INST377</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <header class="header">
-            <h1>Sarah T INST377 Labs</h1>
-        </header>
-        <div class="container">
-            <div class="left_section"></div>
-            <div class="right_section">
-                <h3>Local Restaurants</h3>
-                <div class = "restaurant_list">
-                    A list of local restaurants 
-                </div>
-            </div>
+      <header class="header">
+        <h1>Sarah T INST377 Labs</h1>
+      </header>
+      <div class="container">
+        <div class="left_section">
+          <form action="/api">
+            <label for="resto"></label>
+            <input type="text" name="resto" id="resto" />
+            <button type="submit">Submit</button>
+             <!-- remove name or you will get an error (that is what prof said in the video)-->
+          </form>
         </div>
+        <div class="right_section">
+          <h3>Local Restaurants</h3>
+          <div class="restaurant_list">A list of local restaurants</div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 
 <!-- Bring in your successful HTML/CSS from the Flexbox lab -->
 <!-- Try typing 'doc' at the top of this file and pressing "tab" -->
 <!-- if your development environment is set up correctly -->
 <!-- the Emmett plugin will set this file up for you -->
+
+
 
 <!-- Requirements -->
 <!-- Your page will need a form in it with an 'action' to /api and a single text field with an id/name of "resto" -->
