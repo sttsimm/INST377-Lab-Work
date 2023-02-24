@@ -154,6 +154,8 @@ form {
   background-color: rgb(176 68 68);
   border:2px dashed rgba(0, 0, 0, 0.8);
   font-size: 1.2rem;
+  position:sticky; 
+  bottom:0;
   font-weight: 600;
 }
 
