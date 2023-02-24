@@ -50,9 +50,7 @@ form {
 }
 
 
-div {
-  border:2px dashed rgba(0, 0, 0, 0.8);
-}
+
 /*
   - These styles use 'class names'
   - You can apply them by using the 'class' attribute on your HTML
@@ -77,12 +75,7 @@ div {
   flex:1;
 }
 
-.header {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1.5rem;
-}
+
 
 
 /*
@@ -93,10 +86,11 @@ div {
 
 .header h1 {
   display: block;
+  border:2px dashed rgba(0, 0, 0, 0.8);
   /* this will push other blocks out of the way */
 
   /* colors */
-  background-color: #e7aaaa;
+
   color: #4c1e1e;
 
   /* shapes */
@@ -107,7 +101,7 @@ div {
 
 
   /* box-shadows are fancy */
-  box-shadow: 0 0.5em 1em -0.125em rgb(176 68 68), 0 0 0 1px rgb(10 10 10 / 2%);
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
 
 
@@ -143,7 +137,6 @@ div {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
-  justify-content: center;
   
   display: flex;
   flex-direction: column;
@@ -158,13 +151,13 @@ div {
 .footer {
   flex-shrink: 0;
   padding: 1rem;
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgb(176 68 68);
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .footer a {
-  color: rgba(255, 224, 138, 1);
+  color: #e7aaaa;
   text-decoration: underline;
 }
 
@@ -313,5 +306,17 @@ form input {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
+    }
+    .box{
+      width: 100%;
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      width: fill-available;
+      align-items: flex-start;
+    }
+    .right_section{
+      flex: 1 1 auto;
+      justify-content: flex-start;
     }
 }
