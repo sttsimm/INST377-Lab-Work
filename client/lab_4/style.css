@@ -152,6 +152,7 @@ form {
   flex-shrink: 0;
   padding: 1rem;
   background-color: rgb(176 68 68);
+  border:2px dashed rgba(0, 0, 0, 0.8);
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -159,6 +160,7 @@ form {
 .footer a {
   color: #e7aaaa;
   text-decoration: underline;
+  
 }
 
 /*
@@ -172,6 +174,7 @@ form {
   /* red, green, blue, alpha */
   color: rgb(246, 169, 93);
   text-decoration: none;
+  
 }
 
 .subtitle {
