@@ -5,8 +5,9 @@
 
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
+  const filterButton = document.querySelector('.filter-button');
 
-  let currentList = []; //added this from lecture video
+  let currentList = []; //added this from lecture video, i dont think i need to copy her code
 
   form.addEventListener('submit', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
     submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
@@ -21,8 +22,13 @@ async function mainEvent() { // the async keyword means we can make API requests
     */
 
     // this is the preferred way to handle form data in JS in 2022
-    const formData = new FormData(submitEvent.target); // get the data from the listener target
-    const formProps = Object.fromEntries(formData); // Turn it into an object
+
+
+
+    //const formData = new FormData(submitEvent.target); // get the data from the listener target COMMENTED OUT
+    //const formProps = Object.fromEntries(formData); // Turn it into an object COMMENTED OUT
+
+
 
     // You can also access all forms in a document by using the document.forms collection
     // But this will retrieve ALL forms, not just the one that "heard" a submit event - less good
@@ -37,8 +43,10 @@ async function mainEvent() { // the async keyword means we can make API requests
       // this is a basic GET request
       // It does not include any of your form values, though
     */
+      //const results = await fetch(`/api/foodServicePG?${new URLSearchParams(formProps)}`);
 
     const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    currentList = await results.json
     /*
    ## Get request with query parameters
 
@@ -54,8 +62,10 @@ async function mainEvent() { // the async keyword means we can make API requests
     */
 
     // This changes the response from the GET into data we can use - an "object"
-    const arrayFromJson = await results.json();
-    console.table(arrayFromJson.data); // this is called "dot notation"
+
+    //const arrayFromJson = await results.json(); COMMENTED OUT
+
+    console.table(currentList); // this is called "dot notation"
     // arrayFromJson.data - we're accessing a key called 'data' on the returned object
     // it initially contains all 1,000 records from your request
   });
