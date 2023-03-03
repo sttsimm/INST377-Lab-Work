@@ -5,7 +5,7 @@
 
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
-  const filterButton = document.querySelector('.filter-button');
+  const filterButton = document.querySelector('.filter_button');
 
   let currentList = []; //added this from lecture video, i dont think i need to copy her code
 
