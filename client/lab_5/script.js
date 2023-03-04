@@ -3,6 +3,11 @@
   by adding `<script src="script.js">` just before your closing `</body>` tag
 */
 function filterList(list, query){
+  return list.filter((item) => {
+    const lowerCaseName = item.name.toLowerCase();
+    const lowerCaseQuery = query.toLowerCase();
+    return lowerCaseName.includes(lowerCaseQuery);
+  })
 
 }
 async function mainEvent() { // the async keyword means we can make API requests
