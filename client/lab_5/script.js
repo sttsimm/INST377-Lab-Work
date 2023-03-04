@@ -2,7 +2,9 @@
   Hook this script to index.html
   by adding `<script src="script.js">` just before your closing `</body>` tag
 */
+function filterList(list, query){
 
+}
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
   const filterButton = document.querySelector('.filter_button');
@@ -73,10 +75,11 @@ async function mainEvent() { // the async keyword means we can make API requests
   filterButton.addEventListener('click', (event)=>{
     console.log('clicked FilterButton');
 
-    const formData = new FormData(form);
+    const formData = new FormData(form); //change back to form
     const formProps = Object.fromEntries(formData);
 
     console.log(formProps); 
+    const newList = filterList(currentList, ); 
 
   })
 }
