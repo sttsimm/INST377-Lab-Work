@@ -238,6 +238,11 @@
   .visible {
     display: block;
   }
+
+  .button {
+    display: flex;
+    flex-direction: row;
+  }
   
   .carousel_item img {
     /* 
