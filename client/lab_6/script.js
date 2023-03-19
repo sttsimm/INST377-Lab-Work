@@ -11,7 +11,7 @@ function getRandomIntInclusive(min, max) {
 
 function injectHTML(list){
   console.log('fired injectHTML')
-  const target = document.querySelector('.restaurant_list box'); //added box to match up with html
+  const target = document.querySelector('.restaurant_list .box'); //added .box to match up with html
   target.innerHTML = '';
   list.forEach((item) => {
     const str = `<li>${item.name}</li>`;
@@ -35,7 +35,7 @@ function cutRestaurantList(list){
   return newArray = range.map((item) => {
     const index = getRandomIntInclusive(0, list.length - 1);
     return list[index]
-  })
+  }); //added semi colon 
 }
 
 async function mainEvent() { // the async keyword means we can make API requests
