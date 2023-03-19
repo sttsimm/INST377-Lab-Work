@@ -27,8 +27,13 @@ function filterList(list, query){
     const lowerCaseQuery = query.toLowerCase();
     return lowerCaseName.includes(lowerCaseQuery);
   });
-
 }
+
+function cutRestaurantList(list){
+  console.log('fired cut list');
+  
+}
+
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
   const filterButton = document.querySelector('#filter_button');
@@ -62,7 +67,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   })
 
   generateListButton.addEventListener('click', (event) => {
-    
+
   })
 }
 
