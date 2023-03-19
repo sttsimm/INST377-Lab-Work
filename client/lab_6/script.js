@@ -71,6 +71,8 @@ async function mainEvent() { // the async keyword means we can make API requests
   })
 
   generateListButton.addEventListener('click', (event) => {
+    console.log('generate new list');
+    const restaurantsList = cutRestaurantList(currentList);
 
   })
 }
