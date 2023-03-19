@@ -60,6 +60,10 @@ async function mainEvent() { // the async keyword means we can make API requests
     console.log(newList); 
 
   })
+
+  generateListButton.addEventListener('click', (event) => {
+    
+  })
 }
 
 /*
