@@ -9,6 +9,14 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
 }
 
+function injectHTML(list){
+  console.log('fired injectHTML')
+  const target = document.querySelector('#restaurant_list');
+  target.innerHTML = '';
+
+}
+
+
 function filterList(list, query){
   return list.filter((item) => {
     const lowerCaseName = item.name.toLowerCase();
