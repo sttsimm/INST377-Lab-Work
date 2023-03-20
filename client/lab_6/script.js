@@ -51,8 +51,8 @@ async function mainEvent() { // the async keyword means we can make API requests
   let currentList = []; //added this from lecture video, i dont think i need to copy her code
 
   loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
-    submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
-    console.log('form submission'); // this is substituting for a "breakpoint"
+    //submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
+    console.log('Loading data'); // this is substituting for a "breakpoint"
 
     const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
 
