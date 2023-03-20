@@ -55,7 +55,6 @@ async function mainEvent() { // the async keyword means we can make API requests
 
     currentList = await results.json();
     console.table(currentList); 
-    injectHTML(currentList);
   });
 
   filterButton.addEventListener('click', (event)=>{
@@ -80,9 +79,4 @@ async function mainEvent() { // the async keyword means we can make API requests
   })
 }
 
-/*
-  This adds an event listener that fires our main event only once our page elements have loaded
-  The use of the async keyword means we can "await" events before continuing in our scripts
-  In this case, we load some data when the form has submitted
-*/
 document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
