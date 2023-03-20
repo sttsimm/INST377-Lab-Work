@@ -53,6 +53,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
     //submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
     console.log('Loading data'); // this is substituting for a "breakpoint"
+    loadAnimation.style.display = 'inline-block';
 
     const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
 
