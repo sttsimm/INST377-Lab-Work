@@ -46,6 +46,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const generateListButton = document.querySelector('.generate');
 
   const loadAnimation = document.querySelector('#data_load_animation');
+  loadAnimation.style.display = 'none';
 
   let currentList = []; //added this from lecture video, i dont think i need to copy her code
 
