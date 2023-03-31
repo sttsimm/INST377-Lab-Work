@@ -80,15 +80,15 @@ function getRandomIntInclusive(min, max) {
   
     generateListButton.addEventListener('click', (event) => {
       console.log('generate new list');
-      const restaurantsList = cutRestaurantList(currentList);
-      console.log(restaurantsList);
-      injectHTML(restaurantsList);
+      currentList = cutRestaurantList(currentList);
+      console.log(currentList);
+      injectHTML(currentList);
   
     })
 
     textField.addEventListener('input', (event)=> {
         console.log('input', event.target.value);
-        const newList = filterList(currentList, formProps.resto);
+        const newList = filterList(currentList, event.target.value);
         injectHTML(newList);
         console.log(newList); 
     })
