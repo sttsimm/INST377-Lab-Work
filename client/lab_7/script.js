@@ -87,7 +87,7 @@ function getRandomIntInclusive(min, max) {
     })
 
     textField.addEventListener('input', (event)=> {
-        
+        console.log('input', event.target.value);
     })
   }
   
