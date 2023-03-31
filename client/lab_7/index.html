@@ -1,0 +1,54 @@
+<!--
+    This is how to build the CSS-only load animation from loading.io    
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+    This is helpful for showing your client-side users when data is loading,
+    since there's otherwise no sign your app is thinking about something!
+
+    Try placing it at the same level in your element tree as your Submit button
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarah T's Labs for INST377</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Sarah T INST377 Labs</h1>
+      </header>
+      <div class="container">
+         <div class="left_section box">
+            <h2>Form Inputs</h2> 
+          <form class = "box main_form" >
+            <button type="button" id = "data_load">Load County Data</button>
+            <div>
+                <label for="resto"> Restaurant Name</label> 
+                <input type="text" id="resto" name="resto"/>
+           </div>
+            <div class = "button">
+            <button type="button" class = "filter_button">Filter Data</button>
+            <button type="button" class = "generate">Generate List</button>
+          </div>
+          </form>
+             <!-- remove name or you will get an error (that is what prof said in the video) name = "resto"--> 
+           <!-- </form> -->
+          </div>
+         <div class="right_section box">
+          <h3>Local Restaurants</h3>
+          <ol class="box" id = "restaurant_list">
+            A list of Local Restaurants
+          </ol>
+          <div class="lds-ellipsis" id = "data_load_animation"><div></div><div></div><div></div><div></div></div>
+          </div>
+      </div>
+      <footer class = "footer">
+        sttsimm: <a href="https://github.com/sttsimm">account link</a>
+      </footer>
+    </div>
+    <script src = "./script.js" ></script>
+  </body>
+</html>
