@@ -88,6 +88,9 @@ function getRandomIntInclusive(min, max) {
 
     textField.addEventListener('input', (event)=> {
         console.log('input', event.target.value);
+        const newList = filterList(currentList, formProps.resto);
+        injectHTML(newList);
+        console.log(newList); 
     })
   }
   
