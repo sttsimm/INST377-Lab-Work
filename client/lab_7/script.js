@@ -80,9 +80,9 @@ function getRandomIntInclusive(min, max) {
   
     generateListButton.addEventListener('click', (event) => {
       console.log('generate new list');
-      currentList = cutRestaurantList(currentList);
-      console.log(currentList);
-      injectHTML(currentList);
+      const restaurantsList = cutRestaurantList(currentList);
+      console.log(restaurantsList);
+      injectHTML(restaurantsList); 
   
     })
 
