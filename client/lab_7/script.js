@@ -48,6 +48,7 @@ function getRandomIntInclusive(min, max) {
   
     const loadAnimation = document.querySelector('#data_load_animation');
     loadAnimation.style.display = 'none';
+    generateListButton.style.display = 'none';
   
     let currentList = []; 
     let storedList = [];
