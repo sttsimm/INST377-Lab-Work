@@ -85,6 +85,10 @@ function getRandomIntInclusive(min, max) {
       injectHTML(restaurantsList);
   
     })
+
+    textField.addEventListener('input', (event)=> {
+        
+    })
   }
   
   document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
