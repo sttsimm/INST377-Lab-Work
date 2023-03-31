@@ -49,7 +49,8 @@ function getRandomIntInclusive(min, max) {
     const loadAnimation = document.querySelector('#data_load_animation');
     loadAnimation.style.display = 'none';
   
-    let currentList = []; //added this from lecture video, i dont think i need to copy her code
+    let currentList = []; 
+    let storedList = [];
   
     loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
       //submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
@@ -59,10 +60,11 @@ function getRandomIntInclusive(min, max) {
       const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   
   
-      currentList = await results.json();
+      storedList = await results.json();
+
       
       loadAnimation.style.display = 'none';
-      console.table(currentList); 
+      console.table(storedList); 
     });
   
     filterButton.addEventListener('click', (event)=>{
