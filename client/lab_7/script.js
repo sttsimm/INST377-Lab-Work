@@ -57,11 +57,15 @@ function getRandomIntInclusive(min, max) {
       //submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
       console.log('Loading data'); // this is substituting for a "breakpoint"
       loadAnimation.style.display = 'inline-block';
+
   
       const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   
   
       storedList = await results.json();
+      if (storedList.length > 0){
+        generateListButton.classList.remove('hidden');
+    }
 
       
       loadAnimation.style.display = 'none';
