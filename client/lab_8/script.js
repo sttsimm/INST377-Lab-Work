@@ -68,7 +68,7 @@ function getRandomIntInclusive(min, max) {
         "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
       );
   
-      storedList = await results.json();
+      const storedList = await results.json();
       localStorage.setItem('storedData', JSON.stringify(storedList));
   
       loadAnimation.style.display = "none";
@@ -90,7 +90,7 @@ function getRandomIntInclusive(min, max) {
     generateListButton.addEventListener("click", (event) => {
       console.log("generate new list");
     
-      currentList = cutRestaurantList(storedList);
+      currentList = cutRestaurantList(parsedData);
       console.log(currentList);
       injectHTML(currentList);
     });
@@ -98,8 +98,8 @@ function getRandomIntInclusive(min, max) {
     textField.addEventListener("input", (event) => {
       console.log("input", event.target.value);
       const newList = filterList(currentList, event.target.value);
-      injectHTML(newList);
       console.log(newList);
+      injectHTML(newList);
     });
   }
   
