@@ -87,7 +87,7 @@ function getRandomIntInclusive(min, max) {
     generateListButton.addEventListener("click", (event) => {
       console.log("generate new list");
       const recallList = localStorage.getItem('storedData');
-      currentList = cutRestaurantList(storedList);
+      currentList = cutRestaurantList(recallList);
       console.log(currentList);
       injectHTML(currentList);
     });
