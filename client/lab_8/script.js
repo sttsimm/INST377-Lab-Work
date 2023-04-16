@@ -48,6 +48,9 @@ function getRandomIntInclusive(min, max) {
     const loadAnimation = document.querySelector("#data_load_animation");
     loadAnimation.style.display = "none";
     generateListButton.classList.add("hidden");
+
+    const storedData = localStorage.getItem('storedData');
+    const parsedData = JSON.parse(storedData);
   
     let currentList = [];
     let storedList = [];
@@ -64,9 +67,6 @@ function getRandomIntInclusive(min, max) {
   
       storedList = await results.json();
       localStorage.setItem('storedData', JSON.stringify(storedList));
-      if (storedList.length > 0) {
-        generateListButton.classList.remove("hidden");
-      }
   
       loadAnimation.style.display = "none";
       //console.table(storedList);
