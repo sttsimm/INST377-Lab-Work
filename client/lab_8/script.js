@@ -38,7 +38,8 @@ function getRandomIntInclusive(min, max) {
   }
 
   function initMap(){
-    const carto = L.map('map').setView([51.505, -0.09], 13);
+    //38.9072° N, 77.0369° W
+    const carto = L.map('map').setView([38.9072, -77.0369], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -56,6 +57,8 @@ function getRandomIntInclusive(min, max) {
     const loadAnimation = document.querySelector("#data_load_animation");
     loadAnimation.style.display = "none";
     generateListButton.classList.add("hidden");
+
+    initMap();
 
     const storedData = localStorage.getItem('storedData');
     const parsedData = JSON.parse(storedData);
