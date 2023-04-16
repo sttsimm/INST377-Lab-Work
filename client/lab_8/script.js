@@ -56,7 +56,7 @@ function getRandomIntInclusive(min, max) {
     }
   
     let currentList = [];
-    let storedList = [];
+    //let storedList = [];
   
     loadDataButton.addEventListener("click", async (submitEvent) => {
       // async has to be declared on every function that needs to "await" something
