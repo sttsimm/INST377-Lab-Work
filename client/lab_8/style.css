@@ -122,10 +122,9 @@
     And will be what displays in your client
   */
   
-  #map{
+  #map {
     width: 400px;
     height: 380px;
-    border: 2px dashed rgb(99 99 99);
     margin-bottom: 1rem;
   }
   
