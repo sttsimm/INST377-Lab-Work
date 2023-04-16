@@ -51,6 +51,9 @@ function getRandomIntInclusive(min, max) {
 
     const storedData = localStorage.getItem('storedData');
     const parsedData = JSON.parse(storedData);
+    if(parsedData.length > 0) {
+        generateListButton.classList.remove('hidden');
+    }
   
     let currentList = [];
     let storedList = [];
@@ -86,9 +89,7 @@ function getRandomIntInclusive(min, max) {
   
     generateListButton.addEventListener("click", (event) => {
       console.log("generate new list");
-      const recallList = localStorage.getItem('storedData');
-      const storedList = JSON.parse(recallList); 
-      //console.log('what is the type of recall list:', typeof recallList);
+    
       currentList = cutRestaurantList(storedList);
       console.log(currentList);
       injectHTML(currentList);
