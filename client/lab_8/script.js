@@ -122,6 +122,12 @@ function getRandomIntInclusive(min, max) {
       injectHTML(newList);
       markerPlace(newList, carto);
     });
+
+    clearDataButton.addEventListener("click", (event) => {
+        console.log('clear browser data');
+        localStorage.clear();
+        console.log('localStorage Check', localStorage.getItem("storedData"))
+    })
   }
   
   document.addEventListener("DOMContentLoaded", async () => mainEvent()); // the async keyword means we can make API requests
