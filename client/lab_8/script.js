@@ -68,6 +68,7 @@ function getRandomIntInclusive(min, max) {
     const form = document.querySelector(".main_form"); // This class name needs to be set on your form before you can listen for an event on it
     //const filterButton = document.querySelector(".filter_button");
     const loadDataButton = document.querySelector("#data_load");
+    const clearDataButton = document.querySelector("#data_clear");
     const generateListButton = document.querySelector(".generate");
     const textField = document.querySelector("#resto");
   
