@@ -49,6 +49,9 @@ function getRandomIntInclusive(min, max) {
   
   function markerPlace(array, map) {
     console.log('array for markers', array);
+    array.forEach((item) => {
+        console.log('markerPlace', item);
+    })
   }
 
   async function mainEvent() {
@@ -99,6 +102,7 @@ function getRandomIntInclusive(min, max) {
       currentList = cutRestaurantList(parsedData);
       console.log(currentList);
       injectHTML(currentList);
+      markerPlace(currentList, carto);
     });
   
     textField.addEventListener("input", (event) => {
@@ -106,6 +110,7 @@ function getRandomIntInclusive(min, max) {
       const newList = filterList(currentList, event.target.value);
       console.log(newList);
       injectHTML(newList);
+      markerPlace(newList, carto);
     });
   }
   
