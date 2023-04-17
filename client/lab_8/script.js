@@ -51,6 +51,7 @@ function getRandomIntInclusive(min, max) {
     console.log('array for markers', array);
     array.forEach((item) => {
         console.log('markerPlace', item);
+        L.marker(item.geocoded_column_1.coordinates).addTo(map);
     })
   }
 
