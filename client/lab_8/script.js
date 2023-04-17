@@ -49,6 +49,13 @@ function getRandomIntInclusive(min, max) {
   
   function markerPlace(array, map) {
     console.log('array for markers', array);
+
+    map.eachLayer((layer) => {
+        if (layer instanceof L.Marker) {
+          layer.remove();
+        }
+      });
+
     array.forEach((item) => {
         console.log('markerPlace', item);
         const {coordinates} = item.geocoded_column_1;
