@@ -39,7 +39,7 @@ function getRandomIntInclusive(min, max) {
 
   function initMap(){
     //38.9072° N, 77.0369° W
-    const carto = L.map('map').setView([38.9072, -77.0369], 13);
+    const carto = L.map('map').setView([38.98, -76.93], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
