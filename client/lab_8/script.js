@@ -79,8 +79,8 @@ function getRandomIntInclusive(min, max) {
     const carto = initMap();
 
     const storedData = localStorage.getItem('storedData');
-    const parsedData = JSON.parse(storedData);
-    if(parsedData.length > 0) {
+    let parsedData = JSON.parse(storedData);
+    if(parsedData?.length > 0) {
         generateListButton.classList.remove('hidden');
     }
   
@@ -99,6 +99,11 @@ function getRandomIntInclusive(min, max) {
   
       const storedList = await results.json();
       localStorage.setItem('storedData', JSON.stringify(storedList));
+      parsedData = storedList;
+
+      if(parsedData?.length > 0) {
+        generateListButton.classList.remove('hidden');
+    }
   
       loadAnimation.style.display = "none";
       //console.table(storedList);
