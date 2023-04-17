@@ -44,6 +44,7 @@ function getRandomIntInclusive(min, max) {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
    }).addTo(carto);
+   return(carto);
   }
   
   async function mainEvent() {
@@ -58,7 +59,7 @@ function getRandomIntInclusive(min, max) {
     loadAnimation.style.display = "none";
     generateListButton.classList.add("hidden");
 
-    initMap();
+    const carto = initMap();
 
     const storedData = localStorage.getItem('storedData');
     const parsedData = JSON.parse(storedData);
