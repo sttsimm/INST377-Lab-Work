@@ -47,6 +47,10 @@ function getRandomIntInclusive(min, max) {
    return(carto);
   }
   
+  function markerPlace(array, map) {
+    console.log('array for markers', array);
+  }
+
   async function mainEvent() {
     // the async keyword means we can make API requests
     const form = document.querySelector(".main_form"); // This class name needs to be set on your form before you can listen for an event on it
